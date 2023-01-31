@@ -3,7 +3,6 @@
  *
  * @author NAME
  */
-
 import java.util.*;
 import java.text.*;
 import java.io.*;
@@ -23,20 +22,22 @@ public class HomemadeAlgorithms {
         Collections.reverse(list);
         System.out.println(list);
         //put it back without Collections
-        for (int i = 0; i < list.size(); i++) {
-            list.add(i, list.remove(list.size() - 1));
-            //System.out.println("*"+list);
+        for (int i = 0; i < list.size() - 1; i++) {
+            list.add(0, list.remove(i + 1));
+            //System.out.println("+"+list);
         }
+
         System.out.println(list);
-        //How can I shuffle? Use Math.random()
-        for (int n = 0; n < 100; n++) {
+        for (int j = 0; j < 100; j++) {
             Collections.sort(list);
-            for (int i = 0; i < list.size()/2; i++) {
+            for (int i = 0; i < list.size() * 2; i++) {
                 int num = (int) (Math.random() * list.size());
-                list.add(num, list.remove(i));
-                //System.out.println("+"+list);
+                int num2 = (int) (Math.random() * list.size());
+                list.add(num, list.remove(num2));
             }
             System.out.println(list);
         }
+        //How can I shuffle? Use Math.random()
+
     }
 }
