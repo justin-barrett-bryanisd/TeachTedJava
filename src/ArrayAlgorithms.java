@@ -28,6 +28,7 @@ public class ArrayAlgorithms {
 //        System.out.println(Arrays.toString(arr));
 //        swap(0,3,arr);
 //        System.out.println(Arrays.toString(arr));
+        BetterButton button;
     }
 
     public static void insertItem(double item, int loc, double[] array) {
