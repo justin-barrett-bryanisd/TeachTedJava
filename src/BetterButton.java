@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,9 +26,17 @@ public class BetterButton extends JButton implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(this.getText()+""+this.toString());
+        System.out.println(this.getText());
     }
-    
+    public void setBackground(Color color){
+        super.setBackground(color);
+        int red=255-color.getRed();
+        int green=255-color.getGreen();
+        int blue=255-color.getBlue();
+        
+        Color front=new Color(red,green,blue);
+        super.setForeground(front);
+    }
     
     
     
